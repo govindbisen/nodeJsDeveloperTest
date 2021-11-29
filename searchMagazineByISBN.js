@@ -4,7 +4,7 @@ const csvFilePath = "./data/magazines.csv";
 
 var searchByISBN = async function cs(isb) {
   const res = await csv().fromFile(csvFilePath);
-  console.log(res.find((i) => i.isbn === isb));
+  console.log("Magazine Title :  ", res.find((i) => i.isbn === isb).title);
 };
 
 const readline = require("readline").createInterface({

@@ -5,14 +5,14 @@ const csvFilePath1 = "./data/magazines.csv";
 var searchMagazineByAuthorsName = async function cs(n) {
   const res = await csv().fromFile(csvFilePath1);
   console.log(`Magazines by Author ${n}`);
-  console.log(res.find((i) => i.authors === n));
+  console.log(res.filter((i) => i.authors === n));
 };
 // function to find books by author name
 const csvFilePath2 = "./data/books.csv";
 var searchBookByAuthorsName = async function cs(n) {
   const res = await csv().fromFile(csvFilePath2);
   console.log(`Books by Author ${n}`);
-  console.log(res.find((i) => i.authors === n));
+  console.log(res.filter((i) => i.authors === n));
 };
 
 // reading input from terminal and functions call to find books/magazines ---
